@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'form';
+
+html {
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+    height: 100%;
+    background-color: white;
+    font-size: 1em;
+    color: $text-base-color;
+
+    .header {
+        width:1920px;
+        border-bottom: 1px solid $text-base-color;
+        padding-bottom: 10px;
+
+        .header_logos {
+            width: 56px;
+            height: 25px;
+            top: 17px;
+            left: 30px;
+            font-family: Avenir;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: #000000;
+        }    
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-base-color;
+      }
+  }
+
+  .container {
+    padding: 16px 16px;
+    width: 100%;
+
+    .body_pageTitle {
+        width: 183px;
+        height: 36px;
+        top: 92px;
+        left: 26px;
+        padding: 0px 100px 0px 0px;
+
+    }
+  }

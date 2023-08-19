@@ -8,4 +8,8 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header.header
+      .header_logos
+        %p.header_pageTitle
+          = link_to 'Boards', root_path
     = yield
