@@ -1,4 +1,4 @@
-.signin_form {
+.sign_form {
   width: 98%;
   margin: 0 auto;
 }
@@ -15,20 +15,32 @@ input,select {
         // left: 26px;
         margin-top: 10px;
         margin-bottom: 50px;
+        background-color: $input-bg-color;
     }
 
     &.password_field {
         top: 295px;
         // left: 26px;
         margin-top: 10px;
-        margin-bottom: 550px;
+        margin-bottom: 450px;
+        background-color: $input-bg-color;
     }
 
-    &.btn-subimit {
+    &.password_field_includedConfirm {
+      top: 295px;
+      // left: 26px;
+      margin-top: 10px;
+      margin-bottom: 50px;
+      background-color: $input-bg-color;
+  }
+
+    &.btn-submit {
         top: 889px;
         // left: 30px;
         background-color: #F8BD1C;
         margin-bottom: 30px;
+        color: white;
+        font-weight: bold;
     }
   }
   
