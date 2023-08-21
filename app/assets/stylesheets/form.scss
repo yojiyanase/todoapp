@@ -1,0 +1,86 @@
+.sign_form {
+  width: 98%;
+  margin: 0 auto;
+}
+
+input,select {
+    // width: 362px;
+    height: 40px;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 10px;
+
+    &.email_field {
+        top: 190px;
+        // left: 26px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        background-color: $input-bg-color;
+    }
+
+    &.password_field {
+        top: 295px;
+        // left: 26px;
+        margin-top: 10px;
+        margin-bottom: 450px;
+        background-color: $input-bg-color;
+    }
+
+    &.password_field_includedConfirm {
+      top: 295px;
+      // left: 26px;
+      margin-top: 10px;
+      margin-bottom: 50px;
+      background-color: $input-bg-color;
+  }
+
+    &.btn-submit {
+        top: 889px;
+        // left: 30px;
+        background-color: #F8BD1C;
+        margin-bottom: 30px;
+        color: white;
+        font-weight: bold;
+    }
+  }
+  
+  label {
+    font-size: 12px;
+
+    &.email_label {
+      width: 44px;
+      height: 25px;
+      top: 161px;
+      left: 26px;
+      font-family: Avenir;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #000000;
+    }
+
+    &.password_label {
+        width: 76px;
+        height: 25px;
+        top: 263px;
+        left: 26px;
+        font-family: Avenir;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: #000000;
+    }
+  }
+  
+  textarea {
+    width: 100%;
+    margin: 8px 0px;
+    padding: 8px 8px;
+    min-height: 440px;
+    resize: vertical;
+    border: 1px solid #EBEBEB;
+  }

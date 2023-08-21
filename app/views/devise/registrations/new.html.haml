@@ -1,0 +1,24 @@
+.container
+  .pageTitle
+    %h2.pageTitle_heading Sign up
+  .sign_form
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field
+        = f.label :email, class: 'email_label'
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: 'email_field'
+      .field
+        = f.label :password, class: 'password_label'
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+        = f.password_field :password, autocomplete: "new-password", class: 'password_field_includedConfirm'
+      .field
+        = f.label :password_confirmation, class: 'password_label'
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: 'password_field'
+      .actions
+        = f.submit "Sign up", class: 'btn-submit'
+    -# = render "devise/shared/links"
