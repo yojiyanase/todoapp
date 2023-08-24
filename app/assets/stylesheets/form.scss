@@ -1,3 +1,5 @@
+@import 'variables';
+
 .sign_form {
   width: 98%;
   margin: 0 auto;
@@ -34,6 +36,14 @@ input,select {
       background-color: $input-bg-color;
   }
 
+    &.title_field {
+      top: 190px;
+      left: 26px;
+      border: 1px solid #000000;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
     &.btn-submit {
         top: 889px;
         // left: 30px;
@@ -45,7 +55,7 @@ input,select {
   }
   
   label {
-    font-size: 12px;
+    font-size: 16px;
 
     &.email_label {
       width: 44px;
@@ -74,6 +84,34 @@ input,select {
         text-align: left;
         color: #000000;
     }
+
+    &.title_label {
+      width: 49px;
+      height: 25px;
+      top: 157px;
+      left: 26px;
+      font-family: Avenir;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #000000;
+    }
+
+    &.content_label {
+      width: 92px;
+      height: 25px;
+      top: 263px;
+      left: 26px;
+      font-family: Avenir;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #000000;
+    }
   }
   
   textarea {
@@ -81,6 +119,15 @@ input,select {
     margin: 8px 0px;
     padding: 8px 8px;
     min-height: 440px;
-    resize: vertical;
-    border: 1px solid #EBEBEB;
+    // resize: vertical;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    &.content_field {
+      height: 203px;
+      top: 296px;
+      left: 26px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
   }
