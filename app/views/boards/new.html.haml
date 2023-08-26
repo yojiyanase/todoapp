@@ -1,0 +1,15 @@
+.container
+  .pageTitle
+    %h2.pageTitle_heading New Board
+  .sign_form
+    = form_with(model: @board, local: true) do |f|
+      %div
+        = f.label :title, 'Name', class: 'title_label'
+      %div
+        = f.text_field :title, class: 'title_field'
+      %div
+        = f.label :content, 'Description', class: 'content_label'
+      %div
+        = f.text_area :content, class: 'content_field'
+      %div
+        = f.submit 'Submit', class: 'btn-submit'
