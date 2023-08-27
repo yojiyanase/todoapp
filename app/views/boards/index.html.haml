@@ -1,5 +1,4 @@
 .container
-  = render 'tabs'
   - @boards.each do |board|
     = render 'commons/board', board: board
   = link_to new_board_path do
