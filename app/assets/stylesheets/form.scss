@@ -5,6 +5,14 @@
   margin: 0 auto;
 }
 
+.pageTitle {
+  margin-bottom: 10px;
+  .pageTitle_heading {
+    font-weight: normal;
+    font-size: 20px;
+}
+}
+
 input,select {
     // width: 362px;
     height: 40px;
@@ -24,7 +32,7 @@ input,select {
         top: 295px;
         // left: 26px;
         margin-top: 10px;
-        margin-bottom: 450px;
+        margin-bottom: 400px;
         background-color: $input-bg-color;
     }
 
