@@ -2,7 +2,8 @@
   %h2.all_boards_tag All Boards
   - @boards.each do |board|
     = render 'commons/board', board: board
-  .add_new_board
-    .add_new_board_content
-      .add_new_board_title
-        = link_to '+ Add new board', new_board_path
+  = link_to new_board_path do
+    .add_new_board
+      .add_new_board_content
+        .add_new_board_title
+          %h2 + Add new board
