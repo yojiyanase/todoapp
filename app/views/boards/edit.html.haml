@@ -3,7 +3,7 @@
     - @board.errors.full_messages.each do |message|
       %li= message
   .pageTitle
-    %h2.pageTitle_heading New Board
+    %h2.pageTitle_heading Board
   .sign_form
     = form_with(model: @board, local: true) do |f|
       %div

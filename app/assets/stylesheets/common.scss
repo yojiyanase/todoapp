@@ -7,6 +7,10 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    
+    .dropdown_menu {
+      padding-right: 25px;
+    }
   }
   
   .dropdown-content {

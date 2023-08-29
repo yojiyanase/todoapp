@@ -1,9 +1,12 @@
 @import 'reset';
-@import 'tabs';
+@import 'header';
 @import 'variables';
+@import 'card';
 @import 'board';
 @import 'form';
+@import 'flash';
 @import 'common';
+@import 'profile';
 
 html {
     word-spacing: 1px;
@@ -13,67 +16,45 @@ html {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     height: 100%;
-}
-
-:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-    width: 100%;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    height: 100%;
     background-color: white;
     font-size: 1em;
     color: $text-base-color;
-    margin: 0 auto;
-
-    .header {
-        width:100%;
-        border-bottom: 1px solid $text-base-color;
-        padding-bottom: 10px;
-
-        .header_logos {
-            width: 56px;
-            height: 25px;
-            margin-top: 17px;
-            margin-left: 30px;
-            margin-right: 30px;
-
-            .header_pageTitle {
-            font-family: Avenir;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 25px;
-            letter-spacing: 0px;
-            text-align: left;
-            color: #000000;
-            }
-        }    
-    }
-
-    a {
-        text-decoration: none;
-        color: $text-base-color;
-      }
   }
-
+  
+  a {
+    text-decoration: none;
+    color: $text-base-color;
+  }
+  
   .container {
     padding: 16px 16px;
     width: 100%;
-    
-    .pageTitle {
-        width: 98%;
-        margin: 0 auto;
-    }
-
-    .pageTitle_heading {
-        height: 36px;
-        top: 92px;
-        left: 26px;
-        padding: 0px 100px 0px 0px;
-        font-weight: bold;
-        font-size: 20px;
-        font-weight: bold;
+  }
+  
+  .float_btn {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    text-align: center;
+    background-color: $primary-color;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  
+    i {
+      margin-top: 22px;
     }
   }
