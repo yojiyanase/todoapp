@@ -9,6 +9,7 @@ class Board < ApplicationRecord
   validates :content, uniqueness: true
 
     belongs_to :user
+    has_many :tasks, dependent: :destroy
 
     def display_created_at
         I18n.l(created_at, format: :default)
