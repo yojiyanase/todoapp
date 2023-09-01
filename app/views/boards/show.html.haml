@@ -1,18 +1,10 @@
-.board
-  %h1.board_title= @board.title
-  .board_detail
-    -# = image_tag @board.user.avatar_image
-    %div
-      %p= @board.author_name
-      -# %p= @board.display_created_at
-  - if user_signed_in? && current_user.has_written?(@board)
-    .board_detail_actions
-      .dropdown
-        .dropdown_menu
-          = image_tag 'actions.svg', class: 'dropbtn'
-          .dropdown-content.mini
-            = link_to 'Edit', edit_board_path(@board)
-            = link_to 'Delete', board_path(@board), data: {method: 'delete', confirm: '本当に削除してもいよろしいですか？'}
-  .board_content
-    = @board.content
-
+.container
+  %h2.all_boards_tag
+    = @board.title
+  - @tasks.each do |task|
+    = render 'commons/board', board: task
+  = link_to new_task_path do
+    .add_new_board
+      .add_new_board_content
+        .add_new_board_title
+          %h2 + Add new card
