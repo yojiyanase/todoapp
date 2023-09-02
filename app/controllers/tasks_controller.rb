@@ -21,12 +21,13 @@ class TasksController < ApplicationController
     end
 
     def show
+        @task = current_user.tasks.find(params[:id])
     end
 
     private
 
     def task_params
-        params.require(:task).permit(:title, :content)
+        params.require(:task).permit(:title, :content, :eyecatch)
     end
 
     def set_task
