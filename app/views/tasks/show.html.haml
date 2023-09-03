@@ -18,6 +18,9 @@
   .task_content_section
     .task_content
       = @task.content
+    .task_limit
+      %h2 Limit
+      = @task.limit
 -#   - if user_signed_in?
 -#     - if current_user.has_liked?(@article)
 -#       .article_heart

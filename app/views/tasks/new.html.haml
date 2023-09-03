@@ -19,4 +19,8 @@
       %div
         = f.text_area :content, class: 'content_field'
       %div
+        = f.label :limit, 'Limit', class: 'limit_label'
+      %div
+        = f.date_field :limit, class: 'limit_field'
+      %div
         = f.submit 'Submit', class: 'btn-submit'
