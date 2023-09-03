@@ -10,7 +10,7 @@
         .card_content
           .card_title
             = task.title
-          - if user_signed_in? && current_user.has_written?(task)
+          - if user_signed_in? && current_user.has_written_task?(task)
             .board_detail_actions
               .dropdown
                 .dropdown_menu

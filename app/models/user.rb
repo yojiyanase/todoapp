@@ -29,5 +29,9 @@ class User < ApplicationRecord
       'default-avatar.png'
     end
   end
+
+  def has_written_task?(task)
+    tasks.exists?(id: task.id)
+  end
   
 end
