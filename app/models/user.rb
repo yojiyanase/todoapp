@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :boards, dependent: :destroy
   has_one :profile, dependent: :destroy
+  has_many :tasks, dependent: :destroy
 
   delegate :birthday, :age, :gender, to: :profile, allow_nil: true
 
@@ -27,6 +28,10 @@ class User < ApplicationRecord
     else
       'default-avatar.png'
     end
+  end
+
+  def has_written_task?(task)
+    tasks.exists?(id: task.id)
   end
   
 end

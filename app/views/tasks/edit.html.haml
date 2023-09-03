@@ -1,0 +1,27 @@
+.container
+  %ul
+    - @task.errors.full_messages.each do |message|
+      %li= message
+  .pageTitle
+    %h2.pageTitle_heading
+      = @task.title
+  .sign_form
+    = form_with(model: @task, local: true) do |f|
+      %div
+        = f.label :eyecatch, 'Eyecatch', class: 'eyecatch_label'
+      %div
+        = f.file_field :eyecatch, class: 'eyecatch_field'
+      %div
+        = f.label :title, 'Name', class: 'title_label'
+      %div
+        = f.text_field :title, class: 'title_field'
+      %div
+        = f.label :content, 'Description', class: 'content_label'
+      %div
+        = f.text_area :content, class: 'content_field'
+      %div
+        = f.label :limit, 'Limit', class: 'limit_label'
+      %div
+        = f.date_field :limit, class: 'limit_field'
+      %div
+        = f.submit 'Submit', class: 'btn-submit'

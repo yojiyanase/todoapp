@@ -7,7 +7,8 @@ class BoardsController < ApplicationController
     end
 
     def show
-        @board = current_user.boards.find(params[:id])
+        @board = Board.find(params[:id])
+        @tasks = Task.all
     end
     
     def new
