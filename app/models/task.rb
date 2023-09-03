@@ -3,6 +3,7 @@ class Task < ApplicationRecord
 
     belongs_to :user
     belongs_to :board, optional: true
+    has_many :comments, dependent: :destroy
 
     def display_created_at
         I18n.l(created_at, format: :default)
