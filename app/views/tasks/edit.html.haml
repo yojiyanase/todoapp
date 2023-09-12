@@ -6,7 +6,7 @@
     %h2.pageTitle_heading
       = @task.title
   .sign_form
-    = form_with(model: @task, local: true) do |f|
+    = form_with(model: @task, url: board_task_path(board_id: @board.id), local: true) do |f|
       %div
         = f.label :eyecatch, 'Eyecatch', class: 'eyecatch_label'
       %div

@@ -7,31 +7,37 @@ class TasksController < ApplicationController
     end
 
     def new
+        @board = current_user.boards.find(params[:board_id])
         @task = current_user.tasks.build
     end
 
     def create
-        @task = current_user.tasks.build(task_params)
+        # @board = current_user.boards.find(params[:board_id])
+        # @task = @board.tasks.build(task_params)
+        board = Board.find(params[:board_id])
+        @task = board.tasks.build(task_params)
         if @task.save
-        redirect_to task_path(@task), notice: '保存できたよ'
+          redirect_to board_task_path(board_id: @task.board_id, id: @task.id), notice: '保存できたよ'
         else
-        flash.now[:error] = '保存に失敗しました'
-        render :new
+          flash.now[:error] = '保存に失敗しました'
+          render :new
         end
     end
 
     def show
         @task = current_user.tasks.find(params[:id])
+        @comments = @task.comments
     end
 
     def edit
+        @board = current_user.boards.find(params[:board_id])
         @task = current_user.tasks.find(params[:id])
     end
     
     def update
         @task = current_user.tasks.find(params[:id])
         if @task.update(task_params)
-          redirect_to task_path(@task), notice: '更新できました'
+          redirect_to board_task_path(board_id: @task.board_id, id: @task.id), notice: '更新できました'
         else
           flash.now[:error] = '更新できませんでした'
           render :edit
@@ -47,7 +53,7 @@ class TasksController < ApplicationController
     private
 
     def task_params
-        params.require(:task).permit(:title, :content, :eyecatch, :limit)
+        params.require(:task).permit(:title, :content, :eyecatch, :limit).merge(user_id:current_user.id, board_id: params[:board_id])
     end
 
     def set_task
